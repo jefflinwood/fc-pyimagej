@@ -5,9 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    ij = imagej.init("2.14.0")
+    ij = imagej.init("2.5.0")
     print(ij.getVersion())
-    return 'Hello World!'
+    return f'{ij.getVersion()}'
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=3000)
