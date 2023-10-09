@@ -6,8 +6,8 @@ app = Flask(__name__)
 @app.route('/')
 def index():
     ij = imagej.init("2.5.0")
-    print(ij.getVersion())
-    return "Hello World!"
+    version = ij.getVersion()
+    return f'Hello World! ImageJ version: {version}'
 
 @app.route('/health')
 def health():
