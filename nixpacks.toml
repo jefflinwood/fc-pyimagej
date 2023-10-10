@@ -1,3 +1,4 @@
 [phases.setup]
-nixPkgs = ['...', 'jdk', 'binutils', 'maven']
-aptPkgs = ['...', 'default-jdk', 'python3-opencv']
+nixPkgs = ['...', 'jdk', 'binutils', 'maven', 'libjpeg']
+nixLibs = ['...', 'libjpeg']
+aptPkgs = ['...', 'default-jdk', 'python3-opencv', 'libjpeg-turbo8']
