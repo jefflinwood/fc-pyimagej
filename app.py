@@ -25,8 +25,11 @@ def test_ij():
 
 @app.route('/imageopen')
 def imageopen():
-    test_ij()
-    return "OK"
+    result = test_ij()
+    if result == True:
+        return "OK"
+    else:
+        return "Not Working"
 
 if __name__ == "__main__":
     app.run(host='0.0.0.0', port=3000)
